@@ -1,3 +1,4 @@
+import { ApiProvider } from './../../providers/api/api';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -11,14 +12,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-dashboard',
   templateUrl: 'dashboard.html',
+  providers: [ApiProvider]
 })
 export class DashboardPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  passes: any[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public apiProvider: ApiProvider) {
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DashboardPage');
+    this.passes = this.apiProvider.getPasses()
   }
 
 }

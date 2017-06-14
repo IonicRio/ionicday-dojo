@@ -16,16 +16,16 @@ export class HomePage {
 
   login() {
     console.log(this.inputLogin , this.inputPassword)
-    this.navCtrl.push("DashboardPage")
+    this.navCtrl.setRoot("DashboardPage");
   }
 
   cadastro() {
-    console.log(`cadastro`)
-    this.navCtrl.push("CadastroPage")
+    console.log('cadastro')
+    this.navCtrl.push("CadastroPage");
   }
 
   esqueceuSenha() {
-    console.log(`esqueceus`)
+    this.navCtrl.push("EsqueceuSenhaPage");
   }
 
 }
