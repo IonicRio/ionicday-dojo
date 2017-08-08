@@ -9,6 +9,10 @@ node('ionic'){
     }
   }
   
+  stage('install'){
+    sh 'npm install' 
+  }
+  
   stage('Build'){
     sh 'ionic cordova build android --prod --optimizejs' 
   }
