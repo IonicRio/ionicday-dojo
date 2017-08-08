@@ -5,7 +5,7 @@ node('ionic'){
 
   stage('Fetch') {
     timeout(time: 60, unit: 'SECONDS') {
-      git branch: 'master', url: 'git@github.com:IonicRio/ionicday-dojo.git'
+      git branch: 'master', url: 'https://github.com/IonicRio/ionicday-dojo.git'
     }
   }
   
